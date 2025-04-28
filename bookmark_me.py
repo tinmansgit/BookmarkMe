@@ -6,7 +6,7 @@ from tkinter import ttk, messagebox
 import bookmarkme_logger
 from bookmarkme_logger import log_error, log_debug
 
-bookmarks_file = '/bin/Python/BookmarkMe/mybms.json'
+bookmarks_file = '~/bin/Python/BookmarkMe/mybms.json'
 
 class Bookmark:
     def __init__(self, id=0, title='', category='', url=''):
@@ -107,7 +107,7 @@ class BookmarkApp(tk.Tk):
         super().__init__()
         self.title("BookmarkMe")
         try:
-            icon = tk.PhotoImage(file="/bin/Python/BookmarkMe/bookmark-me_icon.png")
+            icon = tk.PhotoImage(file="~/bin/Python/BookmarkMe/bookmark-me_icon.png")
             self.iconphoto(False, icon)
         except Exception as e:
             log_error(f"Failed to load icon: {e}")

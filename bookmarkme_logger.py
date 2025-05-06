@@ -1,7 +1,10 @@
 import logging
+from datetime import datetime
 
-error_log_file = '/bin/Python/BookmarkMe/log_bookmarkme_error.log'
-debug_log_file = '/bin/Python/BookmarkMe/log_bookmarkme_debug.log'
+current_date = datetime.now().strftime('%Y-%m-%d')
+error_log_file = f'~/bin/Python/BookmarkMe/log_error_bookmarkme_{current_date}.log'
+debug_log_file = f'~/bin/Python/BookmarkMe/log_debug_bookmarkme_{current_date}.log'
+
 
 logger = logging.getLogger('app_logger')
 logger.setLevel(logging.DEBUG)
